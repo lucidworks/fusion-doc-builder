@@ -29,7 +29,9 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   export LANG=en_US.UTF-8 && \
   export LC_ALL=en_US.UTF-8 && \
   dpkg-reconfigure locales
-
+RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
+  apt-get -y install ruby ruby-dev nodejs && \
+  gem install asciidoctor jekyll
 ENV LANGUAGE en_US:en
 ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
