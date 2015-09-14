@@ -19,6 +19,7 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   adduser --quiet --gecos "" --disabled-password jenkins && \
   (echo "jenkins:jenkins" | chpasswd)  && \
   pip install virtualenv && \
+  pip install awscli && \
   apt-get -y install vim
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   apt-get -y install locales && \
