@@ -33,6 +33,11 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   apt-get -y install ruby ruby-dev nodejs && \
   gem install asciidoctor jekyll jekyll-asciidoc
+
+RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
+  apt-get update && \
+  apt-get install -y linkchecker
+
 ENV LANGUAGE en_US:en
 ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
