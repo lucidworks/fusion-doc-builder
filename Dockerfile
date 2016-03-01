@@ -41,6 +41,6 @@ ENV LANGUAGE en_US:en
 ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
-EXPOSE 22 8764
+EXPOSE 22 8764 4000
 
 CMD ["/usr/sbin/sshd", "-D"]
