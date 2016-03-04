@@ -15,4 +15,4 @@ NOTE: This is a public repo.
 1. Clone the Fusion-docs repo (it's a private repo, hence the need for Github SSH key): `git clone https://github.com/lucidworks/Fusion-docs`.
 1. Build the docs site: `./build-versions.sh <versions>`.
 1. Serve up the site.  From the directory Fusion-docs/jekyll run: `jekyll serve --host 0.0.0.0  --skip-initial-build --no-watch`.  The default port used by the Jekyll server is port 4000.
-1. View the Fusion-docs in a browser: `http://0.0.0.0:4000/`.
+1. View the Fusion-docs in a browser: `link:http://0.0.0.0:4000/`.
