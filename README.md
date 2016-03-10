@@ -14,6 +14,7 @@ NOTE: This is a public repo.
 1. Log in to the container as the "jenkins" user, using the access URL port and IP address for port 22: `ssh -p <port> jenkins@<IP-address>`.  The password is also "jenkins".
 1. Clone the Fusion-docs repo (it's a private repo, hence the need for Github SSH key): `git clone https://github.com/lucidworks/Fusion-docs`.
 1. Build the docs site: `./build-versions.sh <versions>`.
+1. Switch to the jekyll directory: `cd jekyll`.
 1. Serve up the site.  From the directory Fusion-docs/jekyll run: `jekyll serve --host 0.0.0.0  --skip-initial-build --no-watch`.  The default port used by the Jekyll server is port 4000.
 1. In Kitematic, find the access URL for the container's `4000/tcp` port, e.g. `192.168.99.100:32771/`.
 1. Use this access URL to view the Fusion-docs in a browser, e.g.: `http://192.168.99.100:32771/index.html`.
