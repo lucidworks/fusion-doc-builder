@@ -2,7 +2,8 @@
 # plus dependencies for our build and some tools we use for testing.
 # Note the plaintext password here; depending on your environment that may not be advisable.
 # Based on evarga/jenkins-slave
-FROM    java:openjdk-7
+FROM ruby:2.3.1-alpine
+
 MAINTAINER  Martijn Koster "martijn.koster@lucidworks.com"
 
 ENV PHANTOMJS_VERSION=1.9.8
