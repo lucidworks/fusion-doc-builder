@@ -20,6 +20,7 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   (echo "jenkins:jenkins" | chpasswd)  && \
   pip install virtualenv && \
   pip install awscli && \
+  pip install pyyaml && \
   apt-get -y install vim
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   apt-get -y install locales && \
