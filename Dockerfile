@@ -2,7 +2,7 @@
 # plus dependencies for our build and some tools we use for testing.
 # Note the plaintext password here; depending on your environment that may not be advisable.
 # Based on evarga/jenkins-slave
-FROM ruby:2.3.1-alpine
+FROM ruby:2.3
 
 MAINTAINER  Martijn Koster "martijn.koster@lucidworks.com"
 
@@ -34,7 +34,7 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   dpkg-reconfigure locales
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   apt-get -y install ruby ruby-dev nodejs && \
-  gem install asciidoctor jekyll jekyll-asciidoc
+  gem install asciidoctor jekyll:2.5.3 jekyll-asciidoc
 
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   pip install linkchecker
