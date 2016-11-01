@@ -35,7 +35,8 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   apt-get install libyaml-dev && \
   pip install pyyaml && \
   apt-get -y install ruby ruby-dev nodejs && \
-  gem install asciidoctor jekyll jekyll-asciidoc
+  gem install asciidoctor jekyll jekyll-asciidoc && \
+  gem install coderay pygments.rb
 
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   pip install linkchecker
