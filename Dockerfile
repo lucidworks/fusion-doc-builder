@@ -21,7 +21,7 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   (echo "jenkins:jenkins" | chpasswd)  && \
   pip install virtualenv && \
   pip install awscli && \
-  pip install pyyaml && \
+  pip install --user PyYAML && \
   apt-get -y install vim
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   apt-get -y install locales && \
@@ -34,7 +34,7 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   dpkg-reconfigure locales
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   apt-get -y install ruby ruby-dev nodejs && \
-  gem install asciidoctor jekyll:2.5.3 jekyll-asciidoc
+  gem install asciidoctor jekyll jekyll-asciidoc
 
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   pip install linkchecker
