@@ -21,7 +21,6 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   (echo "jenkins:jenkins" | chpasswd)  && \
   pip install virtualenv && \
   pip install awscli && \
-  pip install --user PyYAML && \
   apt-get -y install vim
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   apt-get -y install locales && \
@@ -33,6 +32,8 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   export LC_ALL=en_US.UTF-8 && \
   dpkg-reconfigure locales
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
+  apt-get install libyaml-dev && \
+  pip install pyyaml && \
   apt-get -y install ruby ruby-dev nodejs && \
   gem install asciidoctor jekyll jekyll-asciidoc
 
