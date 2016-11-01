@@ -54,9 +54,10 @@ Launch Docker, launch Kitematic.
 
 ## Test the build using `jekyll serve`
 
-1. Run jekyll commands from the directory: `Fusion-docs/jekyll`.
-1. Jekyll is a Ruby application and uses the following environment variable to locate jekyll and its components: `PATH`, `GEM_HOME`, `GEM_PATHS`
-1. The following command sequence will set up the jekyll server in the docker container:
+Jekyll is a Ruby application and uses the following environment variable to locate jekyll and its components: `PATH`, `GEM_HOME`, `GEM_PATHS`
+The following command sequence will set up the jekyll server in the docker container and serve the generated site
+in directory `Fusion-docs/jekyll/_site`:
+
 ```bash
 cd jekyll
 export PATH=/usr/local/bundle/bin:$PATH
@@ -64,6 +65,6 @@ export GEM_HOME=/usr/local/bundle
 export GEM_PATHS=/usr/local/bundle:/usr/local/lib/ruby/gems/2.3.0
 jekyll serve --host 0.0.0.0  --skip-initial-build --no-watch
 ```
-1. The Jekyll server runs on port 4000 by default.  In Kitematic, find the access URL for the container's `4000/tcp` port.
+The Jekyll server runs on port 4000 by default.  In Kitematic, find the access URL for the container's `4000/tcp` port.
 For example if Kitematic lists  `localhost:32771` as the access URL,
 to browse the documentation the browser request URL would be: `http://<container port access url 32771/index.html`.
