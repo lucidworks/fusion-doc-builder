@@ -1,5 +1,6 @@
 # fusion-doc-builder
-Docker container for building Lucidworks docs
+
+Docker container for building Lucidworks Fusion docs.
 
 NOTE: This is a public repo.
 
@@ -10,8 +11,8 @@ Download and install the appropriate flavor of the Docker tools for your machine
 * [Docker for Mac](https://download.docker.com/mac/stable/Docker.dmg)
 * [Docker for Windows](https://download.docker.com/win/stable/InstallDocker.msi)
 
-See [this Docker blogpostool](https://blog.docker.com/2016/07/docker-for-mac-and-windows-production-ready/)
-for details on this toolset.
+Details on this toolset are found in this [Docker blogpost](https://blog.docker.com/2016/07/docker-for-mac-and-windows-production-ready/)
+
 
 ## Set up  .ssh id files for GitHub
 
@@ -32,13 +33,13 @@ Finally, you must make these available to the SSH authentication agent via comma
 On the MacOS, when the Docker app is running, the docker whale icon will be present in the top toolbar.  If it isn't running, launch the Docker app from the Applications folder.
 Clicking on this icon opens the drop-down menu, choose "Open Kitematic"
 
-> Note: if Kitematic is not already installed, the Docker app will provide a download link. Use this to download the .zip file which contains the app. The Mac OS security won't allow this app run and it will fail with message that the download is corrupt. The workaround [these instructions](https://forums.docker.com/t/kitematic-mac-download-corrupt/9256/8)
+> Note: if Kitematic is not already installed, the Docker app will provide a download link. Use this to download the .zip file which contains the app. The Mac OS security won't allow this app run and it will fail with message that the download is corrupt. There is a workaround described [here](https://forums.docker.com/t/kitematic-mac-download-corrupt/9256/8)
 
 ### Windows
 
 Launch Docker, launch Kitematic.
 
-## Build fusion-doc-builder image with Kitematic
+## Create fusion-doc-builder, login to container to build the Fusion docs
 
 1. In the search field, enter fusion-doc-builder.
 1. In the search results, click **Create** on fusion-doc-builder.
