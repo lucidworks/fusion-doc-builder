@@ -32,6 +32,7 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   export LC_ALL=en_US.UTF-8 && \
   dpkg-reconfigure locales
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
+  apt-get install pandoc && \
   apt-get install libyaml-dev && \
   pip install pyyaml && \
   apt-get -y install ruby ruby-dev nodejs && \
