@@ -53,7 +53,10 @@ Launch Docker, launch Kitematic.
 1. Launch the Docker CLI.
 1. Run `ssh-add`.
 1. Log in to the container as the "jenkins" user, using the access URL port and IP address for port 22: `ssh -p <port> jenkins@<IP-address>`. The user "jenkins" has password "jenkins".
-1. Clone the Fusion-docs repo (it's a private repo, hence the need for GitHub SSH key): `git clone git@github.com:Lucidworks/Fusion-docs.git`.
+1. Clone the Fusion-docs repo (it's a private repo, hence the need for GitHub SSH key):
+```
+git clone git@github.com:Lucidworks/Fusion-docs.git
+```
 
 ## Build the Fusion documentation site
 
@@ -83,4 +86,12 @@ to browse the documentation the browser request URL would be: `http://<container
 ## Build the Fusion documentation pdfs
 
 1. Run the script `./build-print.sh` to generate the set of pdfs.
-1. Copy these back to your machine using `scp`
+1. Copy these back to your host machine using `docker cp`
+
+_from your host machine command line_:
+
+```
+docker cp fusion-doc-builder:/home/jenkins/Fusion-docs/pdfs/Fusion_Documentation_3_0.pdf .
+```
+
+
