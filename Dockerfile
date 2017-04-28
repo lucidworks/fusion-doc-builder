@@ -36,12 +36,12 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   pip install pyyaml && \
   apt-get -y install ruby ruby-dev nodejs && \
   gem install asciidoctor:1.5.5 jekyll:3.3.0 jekyll-asciidoc:2.0.1 && \
-  gem install asciidoctor-pdf --version 1.5.0.alpha.9 && \
-  gem install jekyll-toc:0.1.1 && \
+  gem install asciidoctor-pdf --version 1.5.0.alpha.15 && \
+  gem install jekyll-toc:0.3.0.pre1 && \
   gem install coderay pygments.rb
 
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
-  curl -sSL https://github.com/jgm/pandoc/releases/download/1.13.2/pandoc-1.13.2-1-amd64.deb -o/tmp/pandoc.deb && \
+  curl -sSL https://github.com/jgm/pandoc/releases/download/1.17.2/pandoc-1.17.2-1-amd64.deb -o/tmp/pandoc.deb && \
   dpkg -i /tmp/pandoc.deb && \
   rm -f /tmp/pandoc.deb
 
