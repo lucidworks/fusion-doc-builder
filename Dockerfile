@@ -50,7 +50,7 @@ RUN curl -L https://nodejs.org/dist/v8.8.0/node-v8.8.0-linux-x64.tar.xz -o /tmp/
   tar -C /usr/local --extract --strip-components 1 --file /tmp/node.tar.xz && \
   rm /tmp/node.tar.xz
 
-RUN npm install -g gulp && gulp --version
+RUN npm install -g gulp && npm link gulp && gulp --version
 
 ENV LANGUAGE en_US:en
 ENV LANG en_US.UTF-8
