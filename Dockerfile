@@ -45,7 +45,8 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   rm -f /tmp/pandoc.deb
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   pip install linkchecker
-
+  pip install bs4
+  
 RUN curl -L https://nodejs.org/dist/v8.8.0/node-v8.8.0-linux-x64.tar.xz -o /tmp/node.tar.xz && \
   tar -C /usr/local --extract --strip-components 1 --file /tmp/node.tar.xz && \
   rm /tmp/node.tar.xz
