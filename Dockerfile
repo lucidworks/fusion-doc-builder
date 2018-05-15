@@ -33,7 +33,7 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   dpkg-reconfigure locales
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   apt-get install libyaml-dev && \
-  pip install pyyaml && \
+  pip install pyyaml bs4 linkchecker && \
   apt-get -y install ruby ruby-dev nodejs && \
   gem install asciidoctor:1.5.6.1 jekyll:3.7.2 jekyll-asciidoc:2.0.1 && \
   gem install asciidoctor-pdf --version 1.5.0.alpha.15 && \
@@ -43,9 +43,6 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   curl -sSL https://github.com/jgm/pandoc/releases/download/1.17.2/pandoc-1.17.2-1-amd64.deb -o/tmp/pandoc.deb && \
   dpkg -i /tmp/pandoc.deb && \
   rm -f /tmp/pandoc.deb
-RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
-  pip install linkchecker
-  pip install bs4
   
 RUN curl -L https://nodejs.org/dist/v8.8.0/node-v8.8.0-linux-x64.tar.xz -o /tmp/node.tar.xz && \
   tar -C /usr/local --extract --strip-components 1 --file /tmp/node.tar.xz && \
