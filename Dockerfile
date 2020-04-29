@@ -39,6 +39,8 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   gem install asciidoctor-pdf --version 1.5.0.alpha.15 && \
   gem install jekyll-toc:0.3.0.pre1 && \
   gem install coderay pygments.rb
+  gem uninstall ttfunk
+  gem install ttfunk --version 1.5.1
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   curl -sSL https://github.com/jgm/pandoc/releases/download/1.17.2/pandoc-1.17.2-1-amd64.deb -o/tmp/pandoc.deb && \
   dpkg -i /tmp/pandoc.deb && \
