@@ -36,9 +36,7 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   pip install pyyaml bs4 linkchecker && \
   apt-get -y install ruby ruby-dev nodejs && \
   gem install asciidoctor:1.5.6.1 jekyll:3.7.2 jekyll-asciidoc:2.0.1 && \
-  gem uninstall --force ttfunk  && \
-  gem install ttfunk --version 1.5.1 && \
-  gem install asciidoctor-pdf --version 1.5.0.alpha.15 && \
+  gem install asciidoctor-pdf --version 1.5.3 && \
   gem install jekyll-toc:0.3.0.pre1 && \
   gem install coderay pygments.rb
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
