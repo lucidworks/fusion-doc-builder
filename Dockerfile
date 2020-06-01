@@ -2,7 +2,7 @@
 # plus dependencies for our build and some tools we use for testing.
 # Note the plaintext password here; depending on your environment that may not be advisable.
 # Based on evarga/jenkins-slave
-FROM ruby:2.3
+FROM ruby:2.4
 
 MAINTAINER  Martijn Koster "martijn.koster@lucidworks.com"
 
@@ -36,11 +36,11 @@ RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   pip install pyyaml bs4 linkchecker && \
   apt-get -y install ruby ruby-dev nodejs && \
   gem install asciidoctor:1.5.6.1 jekyll:3.7.2 jekyll-asciidoc:2.0.1 && \
+  gem uninstall --force ttfunk  && \
+  gem install ttfunk --version 1.5.1
   gem install asciidoctor-pdf --version 1.5.0.alpha.15 && \
   gem install jekyll-toc:0.3.0.pre1 && \
   gem install coderay pygments.rb && \
-  gem uninstall --force ttfunk  && \
-  gem install ttfunk --version 1.5.1
 RUN export DEBIAN_FRONTEND=noninteractive TERM=linux && \
   curl -sSL https://github.com/jgm/pandoc/releases/download/1.17.2/pandoc-1.17.2-1-amd64.deb -o/tmp/pandoc.deb && \
   dpkg -i /tmp/pandoc.deb && \
